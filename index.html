@@ -1,207 +1,89 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的 GitHub 项目 | kay-ou</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        :root {
-            --github-bg: #f8f9fa;
-            --github-text: #24292e;
-            --github-accent: #0366d6;
-            --github-border: #eaecef;
-        }
-        body {
-            background-color: var(--github-bg);
-            color: var(--github-text);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-        .project-card {
-            transition: all 0.3s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--github-accent);
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .github-corner:hover .octo-arm {
-            animation: octocat-wave 560ms ease-in-out;
-        }
-        @keyframes octocat-wave {
-            0%, 100% { transform: rotate(0); }
-            20%, 60% { transform: rotate(-25deg); }
-            40%, 80% { transform: rotate(10deg); }
-        }
-        @media (max-width: 500px) {
-            .github-corner:hover .octo-arm {
-                animation: none;
-            }
-            .github-corner .octo-arm {
-                animation: octocat-wave 560ms ease-in-out;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kay 的 GitHub主页</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f6f8fa;
+      color: #333;
+    }
+    header {
+      background-color: #24292e;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #0366d6;
+    }
+    a.button {
+      display: inline-block;
+      background-color: #2ea44f;
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    a.button:hover {
+      background-color: #22863a;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-    <!-- 角落 GitHub 标志 -->
-    <a href="https://github.com/kay-ou" class="github-corner" aria-label="View source on GitHub">
-        <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
-            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-            <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-            <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 197.7,73.2 C200.3,80.6 204.0,87.3 204.0,87.3 C208.2,95.3 212.7,96.6 216.5,97.2 C216.5,97.2 219.6,99.1 219.6,99.1 C222.9,103.4 226.5,113.0 226.5,113.0 C229.3,116.9 232.7,121.8 232.7,121.8 C236.9,128.0 237.8,136.3 237.8,136.3 C235.4,143.1 229.9,146.5 222.9,146.5 C215.7,146.5 210.2,141.3 201.7,130.8" fill="currentColor" class="octo-body"></path>
-        </svg>
-    </a>
+  <header>
+    <h1>欢迎来到 kay 的 GitHub 首页</h1>
+    <p>专注于 Python 开发、自动化工具与开源项目构建</p>
+  </header>
 
-    <!-- 导航栏 -->
-    <nav class="bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="#" class="flex-shrink-0 flex items-center">
-                        <i class="fab fa-github text-2xl text-gray-800 mr-2"></i>
-                        <span class="text-xl font-bold text-gray-900">kay-ou 的 GitHub 项目</span>
-                    </a>
-                </div>
-                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
-                    <a href="#about" class="nav-link text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">关于我</a>
-                    <a href="#projects" class="nav-link text-gray-900 hover:text-gray-900 px-3 py-2 text-sm font-medium border-b-2 border-blue-500">我的项目</a>
-                    <a href="#contact" class="nav-link text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">联系方式</a>
-                </div>
-                <div class="-mr-2 flex md:hidden items-center">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+  <main>
+    <section class="card">
+      <h2>关于我</h2>
+      <p>你好！我是 kay，一名热衷于开源和技术探索的开发者。我喜欢构建实用的 API 服务、量化交易框架，以及各种有趣的小工具。</p>
+      <p>浏览我的仓库集合 👉 <a href="https://github.com/kay-ou" class="button">GitHub主页</a></p>
+    </section>
 
-    <!-- 主要内容 -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <!-- 关于我 -->
-        <section id="about" class="mb-16">
-            <div class="text-center mb-12">
-                <h1 class="text-4xl font-bold text-gray-900 mb-4">你好，我是 kay-ou</h1>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">专注于软件开发和开源项目的爱好者，致力于创建实用、高效的代码</p>
-            </div>
-            <div class="flex flex-col md:flex-row items-center justify-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8 text-center md:text-left">
-                    <p class="text-gray-700 mb-4">我在 GitHub 上积极参与开源项目，主要关注 Python、Web 开发和量化交易领域。</p>
-                    <p class="text-gray-700 mb-6">以下是我最近的一些项目，欢迎 star、fork 和提出建议！</p>
-                    <div class="flex justify-center md:justify-start space-x-4">
-                        <a href="https://github.com/kay-ou" class="bg-gray-800 text-white px-6 py-2 rounded-md hover:bg-gray-700 transition-colors">
-                            <i class="fab fa-github mr-2"></i>访问我的 GitHub
-                        </a>
-                        <a href="#projects" class="bg-white text-gray-800 border border-gray-300 px-6 py-2 rounded-md hover:bg-gray-50 transition-colors">
-                            查看我的项目
-                        </a>
-                    </div>
-                </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <img src="https://avatars.githubusercontent.com/u/12345678?v=4" alt="kay-ou" class="w-64 h-64 rounded-full object-cover shadow-lg">
-                </div>
-            </div>
-        </section>
+    <section class="card">
+      <h2>推荐项目：ptradeSim</h2>
+      <p>一个基于事件驱动的量化策略模拟框架，支持行情注入、策略测试与API扩展。</p>
+      <p>开源地址 👉 <a href="https://github.com/kaykouo/ptradeSim" target="_blank" class="button">查看项目</a></p>
+    </section>
+  </main>
 
-        <!-- 项目展示 -->
-        <section id="projects" class="mb-16">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">我的 GitHub 项目</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 项目卡片 1 -->
-                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-gray-900">ptrade-simulator</h3>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Python</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">PTrade 事件驱动策略框架模拟器，支持量化策略回测、行情注入和 API 模拟。</p>
-                        <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <i class="far fa-star mr-1"></i> 128
-                            <i class="fas fa-code-branch ml-3 mr-1"></i> 24
-                            <i class="far fa-eye ml-3 mr-1"></i> 560
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <a href="https://github.com/kay-ou/ptrade-simulator" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-                                <i class="fab fa-github mr-2"></i> 查看项目
-                            </a>
-                            <span class="text-sm text-gray-500">更新于 2025-07-01</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 项目卡片 2 -->
-                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-gray-900">github-actions-templates</h3>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">YAML</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">常用 GitHub Actions 工作流程模板集合，包括 CI/CD、测试、部署等场景。</p>
-                        <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <i class="far fa-star mr-1"></i> 76
-                            <i class="fas fa-code-branch ml-3 mr-1"></i> 18
-                            <i class="far fa-eye ml-3 mr-1"></i> 320
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <a href="https://github.com/kay-ou/github-actions-templates" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-                                <i class="fab fa-github mr-2"></i> 查看项目
-                            </a>
-                            <span class="text-sm text-gray-500">更新于 2025-06-28</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 项目卡片 3 -->
-                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-gray-900">quant-strategies</h3>
-                            <span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Python</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">量化交易策略集合，包含均线、布林带、MACD 等经典策略的实盘和回测实现。</p>
-                        <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <i class="far fa-star mr-1"></i> 95
-                            <i class="fas fa-code-branch ml-3 mr-1"></i> 32
-                            <i class="far fa-eye ml-3 mr-1"></i> 410
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <a href="https://github.com/kay-ou/quant-strategies" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-                                <i class="fab fa-github mr-2"></i> 查看项目
-                            </a>
-                            <span class="text-sm text-gray-500">更新于 2025-07-02</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 项目卡片 4 -->
-                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-gray-900">python-utils</h3>
-                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Python</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Python 实用工具函数集合，涵盖数据处理、文件操作、网络请求等常用功能。</p>
-                        <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <i class="far fa-star mr-1"></i> 54
-                            <i class="fas fa-code-branch ml-3 mr-1"></i> 15
-                            <i class="far fa-eye ml-3 mr-1"></i> 270
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <a href="https://github.com/kay-ou/python-utils" class="text-blue-6
+  <footer>
+    © 2025 kay · 如有问题欢迎在项目页面提 issue 或提交 PR
+  </footer>
+</body>
+</html>
