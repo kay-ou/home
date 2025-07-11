@@ -47,8 +47,9 @@
 如果您喜欢我提供的服务，欢迎通过以下方式支持我：
 
 ### 🇨🇳 国内用户
-- **微信打赏**: 扫描网站上的微信支付二维码
-- **支付宝打赏**: 扫描网站上的支付宝二维码
+
+<img src="images/wechat-pay.png" alt="微信支付二维码" width="200"><img src="images/alipay.jpg" alt="支付宝二维码" width="200">
+
 
 ### 🌍 国际用户
 - **Ko-fi支持**: [https://ko-fi.com/kayou](https://ko-fi.com/kayou)
