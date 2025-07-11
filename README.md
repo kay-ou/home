@@ -32,7 +32,8 @@ public/
 - **2列3行网格布局**: 文字和图片交替排列
   - 第1行: 睡前半小时文字 + 装饰图片
   - 第2行: 装饰图片 + 音乐电台文字
-  - 第3行: SimTradeLab文字 + 服务插图
+  - 第3行: SimTradeLab软件开发文字 + 软件开发装饰图
+- **统一服务标题**: "Kay 提供的服务"移至CTA区域作为整体介绍
 - **响应式设计**: 小屏幕自动切换为单列布局
 - **视觉优化**: 文字区域添加背景色，图片居中对齐
 
@@ -83,28 +84,34 @@ public/
 - Ko-fi打赏: https://ko-fi.com/kayou
 - Clubhouse睡前谈话: https://www.clubhouse.com/house/K%E5%85%88%E7%94%9F%E7%9A%84%E4%B8%96%E7%95%8C
 - Clubhouse音乐电台: https://www.clubhouse.com/house/Kay%E5%8D%88%E5%A4%9C%E9%9F%B3%E4%B9%90%E7%94%B5%E5%8F%B0
-- GitHub项目: https://github.com/kay-ou/SimTradeLab
+- GitHub软件开发项目: https://github.com/kay-ou/SimTradeLab
 - Discord: https://discord.gg/MUWCqsdaQ2
 
 ## 已复制的内容
 
 ✅ 完整的页面结构和内容
 ✅ 所有图片资源（SVG插图、支付二维码等）
-✅ 响应式设计
+✅ 响应式设计（2列3行网格布局）
 ✅ 导航功能（Contact重定向到原网站）
 ✅ Ko-fi浮动支持按钮
-✅ 外部链接（Clubhouse、GitHub、Discord等）
+✅ 外部链接（Clubhouse、GitHub软件开发、Discord等）
 ✅ 简洁的视觉样式和布局
-✅ 轻微的交互动画
+✅ 优化的内容描述（软件开发服务）
+✅ 稳定的滚动表现
 
 ## 更新说明
 
-### v3.5 - 滚动稳定性修复版本（当前）
+### v3.6 - 内容优化版本（当前）
+- **About页面内容调整**:
+  - 将"开源软件"更改为"软件开发"，更准确描述服务内容
+  - 优化图片alt属性为"软件开发装饰图"
+  - 将"Kay 提供的服务"标题移至CTA区域，作为整体服务介绍
+  - 简化CTA区域描述，移除冗余文字
 - **About页面2列3行布局**:
   - 使用CSS Grid实现文字和图片的交替排列
-  - 第1行: 文字左，图片右
-  - 第2行: 图片左，文字右
-  - 第3行: 文字左，图片右
+  - 第1行: 睡前半小时文字 + 装饰图片
+  - 第2行: 装饰图片 + 音乐电台文字
+  - 第3行: SimTradeLab软件开发文字 + 软件开发装饰图
 - **滚动稳定性修复**:
   - 修复最后一幅图不跟随页面滚动的问题
   - 移除冲突的CSS类名组合
