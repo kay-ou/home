@@ -1,101 +1,132 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>kay 的 GitHub主页</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f6f8fa;
-      color: #333;
-    }
-    header {
-      background-color: #24292e;
-      color: #fff;
-      padding: 2rem 0;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.2rem;
-    }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .card h2 {
-      margin-top: 0;
-      color: #0366d6;
-    }
-    a.button {
-      display: inline-block;
-      background-color: #2ea44f;
-      color: white;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-    a.button:hover {
-      background-color: #22863a;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K先生的世界</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>欢迎来到 kay 的 GitHub 首页</h1>
-    <p>专注于 Python 开发、自动化工具与开源项目构建</p>
-  </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">K先生的世界</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="https://www.kayo.dpdns.org/contact/" class="nav-link" target="_blank">Contact</a>
+                <a href="https://ko-fi.com/kayou" class="nav-link" target="_blank">Donate</a>
+            </div>
+            <div class="nav-social">
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-  <main>
-    <section class="card">
-      <h2>关于我</h2>
-      <p>你好！我是 kay，一名热衷于开源和技术探索的开发者。我喜欢构建实用的 API 服务、量化交易框架，以及各种有趣的小工具。</p>
-      <p>浏览我的仓库集合 👉 <a href="https://github.com/kay-ou" class="button">GitHub主页</a></p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Enjoy the Show? Help Kay Keep It Going!</h1>
+            <p>Fuel Kay's Creativity with a Cup of Coffee!</p>
+            <a href="https://ko-fi.com/kayou" class="cta-button" target="_blank">Support Kay</a>
+            <div class="hero-image">
+                <img src="images/raft-illustration.svg" alt="Hero Illustration">
+            </div>
+        </div>
     </section>
 
-    <section class="card">
-      <h2>推荐项目：SimTradeLab</h2>
-      <p>一个基于事件驱动的量化策略模拟框架，支持行情注入、策略测试与API扩展。</p>
-      <p>开源地址 👉 <a href="https://github.com/kay-ou/SimTradeLab" target="_blank" class="button">查看项目</a></p>
+    <!-- Support Section -->
+    <section class="support-section">
+        <div class="container">
+            <div class="support-grid">
+                <!-- WeChat Support -->
+                <div class="support-card">
+                    <div class="support-image">
+                        <img src="images/wechat-pay.png" alt="WeChat Pay QR Code">
+                    </div>
+                    <h3>通过微信打赏支持</h3>
+                    <p>Support Kay with a WeChat Tip—Every Contribution Helps!</p>
+                </div>
+
+                <!-- Ko-fi Support -->
+                <div class="support-card">
+                    <div class="support-image">
+                        <a href="https://ko-fi.com/kayou" target="_blank">
+                            <img src="images/kofi-support.jpg" alt="Ko-fi Support">
+                        </a>
+                    </div>
+                    <h3>通过<a href="https://ko-fi.com/kayou" target="_blank">Ko-fi</a>打赏支持</h3>
+                    <p>Show Your Support Through <a href="https://ko-fi.com/kayou" target="_blank">Ko-fi</a> Donations</p>
+                </div>
+
+                <!-- Alipay Support -->
+                <div class="support-card">
+                    <div class="support-image">
+                        <img src="images/alipay.jpg" alt="Alipay QR Code">
+                    </div>
+                    <h3>通过支付宝打赏支持</h3>
+                    <p>Help Kay Keep Creating—Send a Tip via Alipay!</p>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    © 2025 kay · 如有问题欢迎在项目页面提 issue 或提交 PR
-  </footer>
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Get started today, get in touch!</h2>
+            <a href="https://discord.gg/MUWCqsdaQ2" class="discord-button" target="_blank">
+                <i class="fab fa-discord"></i> Join Discord
+            </a>
+        </div>
+    </section>
 
-  <!-- Ko-fi 浮动支持按钮 -->
-  <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
-  <script>
-    kofiWidgetOverlay.draw('kayou', {
-      'type': 'floating-chat',
-      'floating-chat.donateButton.text': 'Support me',
-      'floating-chat.donateButton.background-color': '#00b9fe',
-      'floating-chat.donateButton.text-color': '#fff'
-    });
-  </script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">K先生的世界</a>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="https://www.kayo.dpdns.org/contact/" target="_blank">Contact</a>
+                    <a href="https://ko-fi.com/kayou" target="_blank">Donate</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 K先生的世界. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ko-fi 浮动支持按钮 -->
+    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+    <script>
+        kofiWidgetOverlay.draw('kayou', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Support me',
+        'floating-chat.donateButton.background-color': '#00b9fe',
+        'floating-chat.donateButton.text-color': '#fff'
+        });
+    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
